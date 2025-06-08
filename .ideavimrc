@@ -1,0 +1,33 @@
+set relativenumber
+set scrolloff=5
+set incsearch
+map Q gq
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+
+
+nnoremap <C-n> :NERDTree<CR>
+
+nmap <C-t> :action ToggleTerminal<CR>
+
+nmap <C-r> :action RecentFiles<CR>
+
+nmap <C-f> :action NewElement<CR>
+
+
+" Копировать в системный буфер при Ctrl+C (в нормальном и визуальном режимах)
+nnoremap <C-c> "+y
+vnoremap <C-c> "+y
+
+" Вставлять из системного буфера при Ctrl+V (в нормальном и вставочном режимах)
+nnoremap <C-v> "+p
+inoremap <C-v> <C-r>+
+
+nmap <C-;> :action NextTab<CR>
+
+nmap <C-j> :action PreviousTab<CR>
+
+n
